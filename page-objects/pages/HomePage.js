@@ -1,17 +1,15 @@
 import Base from '../Base'
 
-class HomePage extends Base{
-    get AcceptCookieElement(){
+class HomePage extends Base {
+	get AcceptCookieElement() {
+		return $('#js-cookie-accept')
+	}
+	cookieAccept() {
+		this.AcceptCookieElement.waitForExist()
+		this.AcceptCookieElement.click()
+	}
 
-        return $('#js-cookie-accept')
-    
-    }
-    cookieAccept(){
-        this.AcceptCookieElement.waitForExist()
-        this.AcceptCookieElement.click()
-    }
-    
-    get allProductsMenuLink() {
+	get allProductsMenuLink() {
 		return $('li.allProducts a.menu.product-menu')
 	}
 	allProductMenu() {
@@ -24,11 +22,7 @@ class HomePage extends Base{
 	allProductsListSelect() {
 		this.allProductsListItem.waitForExist()
 		this.allProductsListItem.click()
-    }
-    
-   
-
-
+	}
 }
 
 export default new HomePage()

@@ -1,7 +1,6 @@
 import Base from '../Base'
 
 class CategoryListingPage extends Base {
-	
 	get productlistpagetitle() {
 		return $('#categoryNameTitle')
 	}
@@ -35,29 +34,23 @@ class CategoryListingPage extends Base {
 		this.productAddPage.waitForExist()
 		expect(this.productAddPage).toBeDisplayed()
 		console.log(this.productAddPage.getText())
-    }
-    
-    get addButtonElement()
-    {
-        return $('.btn.btn-danger.addToBasketBtn.progress.default')
+	}
 
-    }
-    clickAddButton()
-    {
-        this.addButtonElement.waitForExist()
-        this.addButtonElement.click()
-    }
-    get addBasketMessageElement()
-    {
-        return $('.addToBasketMessageText')
-    }
+	get addButtonElement() {
+		return $('.btn.btn-danger.addToBasketBtn.progress.default')
+	}
+	clickAddButton() {
+		this.addButtonElement.waitForExist()
+		this.addButtonElement.click()
+	}
+	get addBasketMessageElement() {
+		return $('.addToBasketMessageText')
+	}
 
-    checkAddedMessage()
-    {
-        this.addBasketMessageElement.waitForExist()
-        expect(this.addBasketMessageElement).toHaveText('Added')
-    }
-
+	checkAddedMessage() {
+		this.addBasketMessageElement.waitForExist()
+		expect(this.addBasketMessageElement).toHaveText('Added')
+	}
 }
 
 export default new CategoryListingPage()

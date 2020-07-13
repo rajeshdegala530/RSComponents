@@ -12,15 +12,12 @@ describe('RS Home Page', () => {
 		App.popUpWindowPresent()
 		const logo = $('.icon-rslogo')
 		const isDisplayed = logo.isExisting()
-        console.log('RS Logo is Displayed -- ' + isDisplayed)
-        
-  
-    })
-    it('User should be able to Reload RS Home Page',()=>{
+		console.log('RS Logo is Displayed -- ' + isDisplayed)
+	})
+	it('User should be able to Reload RS Home Page', () => {
 		App.popUpWindowPresent()
-		$('.icon-rslogo').waitForExist()		
-        $('.icon-rslogo').click()
-        $('.icon-rslogo').waitForExist()
-
-    })
+		$('.icon-rslogo').waitForExist()
+		$('.icon-rslogo').click()
+		$('.icon-rslogo').waitForExist()
+	})
 })
