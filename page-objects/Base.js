@@ -1,4 +1,3 @@
-
 // Code is shared to other pages with inheritance. Expample is Pause. 
 
 class Base {
@@ -18,5 +17,3 @@ class Base {
 }
 
 export default Base
-
-
